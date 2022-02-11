@@ -26,17 +26,29 @@ document.getElementById('withdraw-button').addEventListener('click', function ()
     const withdrawAmountText = withdrawField.value;
     const withdrawAmount = parseFloat(withdrawAmountText);
     withdrawField.value = '';
+
+
     // withdraw calculate
     const withdrawDisplay = document.getElementById('withdraw-display');
     const withdrawDisplayText = withdrawDisplay.innerText;
     const withdrawAmountDisplay = parseFloat(withdrawDisplayText);
     const totalWithdrawAmount = withdrawAmountDisplay + withdrawAmount;
     withdrawDisplay.innerText = totalWithdrawAmount;
+
     // reduce balance for withdraw
     const balanceField = document.getElementById('balance-display');
     const balanceAmountText = balanceField.innerText;
     const balanceAmount = parseFloat(balanceAmountText);
     const totalBalance = balanceAmount - withdrawAmount;
+    if (withdrawAmount > totalBalance) {
+        window.location.href = "not-enough-money.html";
+    }
     balanceField.innerText = totalBalance;
+
+
+
+
+
+
 
 })
