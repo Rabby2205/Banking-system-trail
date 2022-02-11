@@ -11,8 +11,10 @@ document.getElementById('deposit-button').addEventListener('click', function () 
     const initialDepositDisplay = parseFloat(initialDepositDisplayText);
     const newDepostiAmount = (initialDepositDisplay + depositAmount);
     depositDisplay.innerText = newDepostiAmount;
-
-
-
-
+    // calculate balance also
+    const balanceField = document.getElementById('balance-display');
+    const balanceAmountText = balanceField.innerText;
+    const balanceAmount = parseFloat(balanceAmountText);
+    const totalBalance = balanceAmount + depositAmount;
+    balanceField.innerText = totalBalance;
 })
