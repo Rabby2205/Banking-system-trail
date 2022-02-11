@@ -6,7 +6,7 @@ document.getElementById('login-button').addEventListener('click', function () {
     const passwordField = document.getElementById('user-password');
     const userPassword = passwordField.value;
     // condition decleration
-    if (userGmail == 'trail@gmail.com' && userPassword == 'accessOn') {
+    if (userGmail == 'trail@gmail.com' && userPassword == 'access') {
 
         window.location.href = "banking.html"
     }
@@ -14,8 +14,4 @@ document.getElementById('login-button').addEventListener('click', function () {
         window.location.href = "wrong information.html"
     }
 
-})
-// handle deposit button event .
-document.getElementById('deposit-amount').addEventListener('click', function () {
-    console.log('this is ok ');
 })
