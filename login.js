@@ -15,3 +15,7 @@ document.getElementById('login-button').addEventListener('click', function () {
     }
 
 })
+// handle deposit button event .
+document.getElementById('deposit-amount').addEventListener('click', function () {
+    console.log('this is ok ');
+})
